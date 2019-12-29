@@ -117,7 +117,7 @@
 	        <td class="center">
 	         <a href="http://www.deathghost.cn" title="预览" class="link_icon" target="_blank">&#118;</a>
 	         <a href="product_detail.html" title="编辑" class="link_icon">&#101;</a>
-	         <a href="#" title="删除" class="link_icon">&#100;</a>
+	         <a href="javascript:if(window.confirm('您确认要删除这条数据吗?')){location.href='CarServlet?method=delete&carid=<%=c.getCarid() %>'}" title="删除" class="link_icon">&#100;</a>
 	        </td>
 	       </tr>
        <%} %>
@@ -134,5 +134,20 @@
       </aside>
  </div>
 </section>
+<%  if(request.getAttribute("deleteResult")!=null){
+	if(request.getAttribute("deleteResult").toString().equals("true")){
+		%>
+		<script type="text/javascript">
+		alert("删除成功!");
+		</script>
+		<%
+	}else{
+		%>
+		<script type="text/javascript">
+		alert("删除失败!");
+		</script>
+		<%
+	}
+} %>
 </body>
 </html>

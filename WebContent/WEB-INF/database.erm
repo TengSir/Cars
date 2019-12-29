@@ -100,7 +100,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2019-12-28 10:37:14</creation_date>
-			<updated_date>2019-12-29 10:27:53</updated_date>
+			<updated_date>2019-12-29 10:41:47</updated_date>
 			<model_property>
 				<name>Project Name</name>
 				<value></value>
@@ -236,8 +236,8 @@
 			<width>214</width>
 				<font_name>微软雅黑</font_name>
 				<font_size>9</font_size>
-			<x>12</x>
-			<y>158</y>
+			<x>16</x>
+			<y>103</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
