@@ -51,8 +51,10 @@
    <dl>
     <dt>二手车管理</dt>
     <!--当前链接则添加class:active-->
-    <dd><a href="product_list.html" class="active">二手车列表</a></dd>
-    <dd><a href="product_detail.html">添加二手车</a></dd>
+    <dd><a href="CarServlet?method=listAll" class="active">二手车列表</a></dd>
+    <dd><a href="CarServlet?method=add">添加二手车</a></dd>
+    <dd><a href="CarServlet?method=update">修改二手车</a></dd>
+    <dd><a href="CarServlet?method=delete">删除二手车</a></dd>
    </dl>
   </li>
   <li>

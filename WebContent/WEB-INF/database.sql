@@ -1,3 +1,8 @@
+/* Create Database */ 
+CREATE DATABASE CARS CHARSET=UTF8;
+
+/* Switch To DATABASE*/
+USE CARS;
 
 /* Drop Tables */
 
@@ -18,7 +23,7 @@ CREATE TABLE CAR
 	YANSE VARCHAR(20),
 	PAILIANG VARCHAR(20),
 	PRIMARY KEY (CARID)
-);
+)CHARSET=UTF8;
 
 
 
