@@ -37,19 +37,15 @@
 <body>
 <!--header-->
 <header>
- <h1><img src="images/admin_logo.png"/></h1>
- <ul class="rt_nav">
-  <li><a href="http://www.deathghost.cn" target="_blank" class="website_icon">站点首页</a></li>
-  <li><a href="#" class="clear_icon">清除缓存</a></li>
-  <li><a href="#" class="admin_icon">DeathGhost</a></li>
-  <li><a href="#" class="set_icon">账号设置</a></li>
+ <h1 style="color:white;font-weight: bold;font-size: 0.8cm;text-shadow: 2px 2px 2px red;margin-top: 8px">二手车后台管理系统</h1>
+ <ul class="rt_nav" style="position: relative;top: -5px">
   <li><a href="login.html" class="quit_icon">安全退出</a></li>
  </ul>
 </header>
 <!--aside nav-->
 <!--aside nav-->
 <aside class="lt_aside_nav content mCustomScrollbar">
- <h2><a href="index.html">起始页</a></h2>
+ <h2><a href=".">起始页</a></h2>
  <ul>
   <li>
    <dl>
@@ -86,7 +82,14 @@
      <form method="post"  action="CarServlet?method=add"  enctype="multipart/form-data">
       <ul class="ulColumn2">
        <li>
-        <span class="item_name" style="width:120px;">品牌名：</span>
+        <span class="item_name" style="width:120px;">图片：</span>
+        <label class="uploadImg">
+         <input type="file"  name="zhaopian"  />
+         <span>上傳图片</span>
+        </label>
+       </li>
+       <li>
+        <span class="item_name" style="width:120px;">品牌：</span>
         <input type="text"  name="pinpaiming"  class="textbox textbox_295" placeholder="品牌名"/>
        </li>
        <li>
@@ -94,7 +97,7 @@
         <input type="text" name="xilie" class="textbox textbox_295" placeholder="系列"/>
        </li>
        <li>
-        <span class="item_name" style="width:120px;">公里数：</span>
+        <span class="item_name" style="width:120px;">公里：</span>
         <input type="text"  name="gonglishu" class="textbox textbox_295" placeholder="公里数"/>
        </li>
        <li>
@@ -109,13 +112,7 @@
         <span class="item_name" style="width:120px;">排量：</span>
         <input type="text"  name="pailiang" class="textbox textbox_295" placeholder="排量"/>
        </li>
-       <li>
-        <span class="item_name" style="width:120px;">上传图片：</span>
-        <label class="uploadImg">
-         <input type="file"  name="zhaopian"  />
-         <span>上传图片</span>
-        </label>
-       </li>
+      
        <li>
         <span class="item_name" style="width:120px;"></span>
         <input type="submit" class="link_btn"/>

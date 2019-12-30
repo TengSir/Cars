@@ -39,19 +39,15 @@
 <body>
 <!--header-->
 <header>
- <h1><img src="images/admin_logo.png"/></h1>
- <ul class="rt_nav">
-  <li><a href="http://www.deathghost.cn" target="_blank" class="website_icon">站点首页</a></li>
-  <li><a href="#" class="clear_icon">清除缓存</a></li>
-  <li><a href="#" class="admin_icon">DeathGhost</a></li>
-  <li><a href="#" class="set_icon">账号设置</a></li>
+ <h1 style="color:white;font-weight: bold;font-size: 0.8cm;text-shadow: 2px 2px 2px red;margin-top: 8px">二手车后台管理系统</h1>
+ <ul class="rt_nav" style="position: relative;top: -5px">
   <li><a href="login.html" class="quit_icon">安全退出</a></li>
  </ul>
 </header>
 <!--aside nav-->
 <!--aside nav-->
 <aside class="lt_aside_nav content mCustomScrollbar">
- <h2><a href="index.html">起始页</a></h2>
+ <h2><a href=".">起始页</a></h2>
  <ul>
   <li>
    <dl>
@@ -115,8 +111,7 @@
 	        <td class="center"><%=c.getYanse() %></td>
 	        <td class="center"><%=c.getPailiang() %></td>
 	        <td class="center">
-	         <a href="http://www.deathghost.cn" title="预览" class="link_icon" target="_blank">&#118;</a>
-	         <a href="product_detail.html" title="编辑" class="link_icon">&#101;</a>
+	         <a href="CarServlet?method=getCarInfo&carid=<%=c.getCarid() %>" title="编辑" class="link_icon">&#101;</a>
 	         <a href="javascript:if(window.confirm('您确认要删除这条数据吗?')){location.href='CarServlet?method=delete&carid=<%=c.getCarid() %>'}" title="删除" class="link_icon">&#100;</a>
 	        </td>
 	       </tr>
