@@ -41,7 +41,7 @@
 <header>
  <h1 style="color:white;font-weight: bold;font-size: 0.8cm;text-shadow: 2px 2px 2px red;margin-top: 8px">二手车后台管理系统</h1>
  <ul class="rt_nav" style="position: relative;top: -5px">
-  <li><a href="login.html" class="quit_icon">安全退出</a></li>
+  <li><a href="login.jsp" class="quit_icon">安全退出</a></li>
  </ul>
 </header>
 <!--aside nav-->

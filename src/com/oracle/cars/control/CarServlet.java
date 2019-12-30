@@ -15,13 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.FileUploadException;
-import org.apache.tomcat.util.http.fileupload.RequestContext;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
-
 import com.oracle.cars.model.Car;
 import com.oracle.cars.model.CarDAO;
 
@@ -75,21 +68,23 @@ public class CarServlet extends HttpServlet {
 				
 				
 				//读取上传表单页面上的数据并将图像存储到服务器磁盘上，然后将图片路径添加到数据库里面，实现图片上传功能
-				String fileName=request.getPart("zhaopian").getSubmittedFileName();
-				Part  part=request.getPart("zhaopian");
-				InputStream  inputStream=part.getInputStream();
-				String uuidName=UUID.randomUUID()+fileName.substring(fileName.lastIndexOf("."),fileName.length());
-				File newFile= new File(request.getRealPath("images"),"car/"+uuidName);
-				FileOutputStream  outputStream=new  FileOutputStream(newFile);
-				byte[] bs=new byte[1024];
-				int length=-1;
-				while((length=inputStream.read(bs))!=-1) {
-					outputStream.write(bs,0,length);
-					outputStream.flush();
+				String zhaopian="images/car/default.jpg";
+				if(request.getPart("zhaopian")!=null) {
+					Part  part=request.getPart("zhaopian");
+					String fileName=part.getSubmittedFileName();
+					InputStream  inputStream=part.getInputStream();
+					String uuidName=UUID.randomUUID()+fileName.substring(fileName.lastIndexOf("."),fileName.length());
+					File newFile= new File(request.getRealPath("images"),"car/"+uuidName);
+					FileOutputStream  outputStream=new  FileOutputStream(newFile);
+					byte[] bs=new byte[1024];
+					int length=-1;
+					while((length=inputStream.read(bs))!=-1) {
+						outputStream.write(bs,0,length);
+						outputStream.flush();
+					}
+					outputStream.close();
+					 zhaopian="images/car/"+uuidName;
 				}
-				outputStream.close();
-				String zhaopian="images/car/"+uuidName;
-				
 				
 				
 				//2.将这些属性封装成一个java对象
