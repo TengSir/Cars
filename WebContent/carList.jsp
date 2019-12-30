@@ -58,9 +58,7 @@
     <dt>二手车管理</dt>
     <!--当前链接则添加class:active-->
     <dd><a href="CarServlet?method=listAll" class="active">二手车列表</a></dd>
-    <dd><a href="CarServlet?method=add">添加二手车</a></dd>
-    <dd><a href="CarServlet?method=update">修改二手车</a></dd>
-    <dd><a href="CarServlet?method=delete">删除二手车</a></dd>
+    <dd><a href="carAdd.jsp">添加二手车</a></dd>
    </dl>
   </li>
   <li>
@@ -95,7 +93,8 @@
        <input type="button" value="查询" class="group_btn"/>
       </section>
       <table class="table">
-       <tr>
+       <tr bgcolor="#19a97b">
+        <th>图片</th>
         <th>品牌</th>
         <th>系列</th>
         <th>公里数</th>
@@ -108,6 +107,7 @@
        		for(Car c:cars){
        %>
 	       <tr>
+	        <td class="center"><img src="<%=c.getZhaopian() %>"  style="width: 100px;height: 80px;border:1px solid black;"/> </td>
 	        <td class="center"><%=c.getPinpaiming() %> </td>
 	        <td class="center"><%=c.getXilie() %></td>
 	        <td class="center"><%=c.getGonglishu() %></td>

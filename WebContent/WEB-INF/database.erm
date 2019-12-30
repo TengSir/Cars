@@ -100,7 +100,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2019-12-28 10:37:14</creation_date>
-			<updated_date>2019-12-29 10:41:47</updated_date>
+			<updated_date>2019-12-30 08:35:25</updated_date>
 			<model_property>
 				<name>Project Name</name>
 				<value></value>
@@ -226,6 +226,19 @@
 			<physical_name>yanse</physical_name>
 			<type>nvarchar(n)</type>
 		</word>
+		<word>
+			<id>7</id>
+			<length>200</length>
+			<decimal>null</decimal>
+			<array>false</array>
+			<array_dimension>null</array_dimension>
+			<unsigned>false</unsigned>
+			<args></args>
+			<description></description>
+			<logical_name>zhaopian</logical_name>
+			<physical_name>zhaopian</physical_name>
+			<type>nvarchar(n)</type>
+		</word>
 	</dictionary>
 	<tablespace_set>
 	</tablespace_set>
@@ -236,8 +249,8 @@
 			<width>214</width>
 				<font_name>微软雅黑</font_name>
 				<font_size>9</font_size>
-			<x>16</x>
-			<y>103</y>
+			<x>52</x>
+			<y>65</y>
 			<color>
 				<r>128</r>
 				<g>128</g>
@@ -440,6 +453,33 @@
 						<description></description>
 					</sequence>
 				</normal_column>
+				<normal_column>
+					<word_id>7</word_id>
+					<id>7</id>
+					<description></description>
+					<unique_key_name></unique_key_name>
+					<logical_name></logical_name>
+					<physical_name></physical_name>
+					<type>nvarchar(n)</type>
+					<constraint></constraint>
+					<default_value></default_value>
+					<auto_increment>false</auto_increment>
+					<foreign_key>false</foreign_key>
+					<not_null>false</not_null>
+					<primary_key>false</primary_key>
+					<unique_key>false</unique_key>
+					<sequence>
+						<name></name>
+						<schema></schema>
+						<increment></increment>
+						<min_value></min_value>
+						<max_value></max_value>
+						<start></start>
+						<cache></cache>
+						<cycle>false</cycle>
+						<description></description>
+					</sequence>
+				</normal_column>
 			</columns>
 			<indexes>
 			</indexes>
@@ -558,6 +598,19 @@
 								<select>pailiang_2</select>
 								<select>pailiang_3</select>
 								<select>pailiang_4</select>
+							</data_def>
+							<data_def>
+								<column_id>7</column_id>
+								<type>Format</type>
+								<repeat_num>1</repeat_num>
+								<template>zhaopian_%</template>
+								<from>1</from>
+								<to>100</to>
+								<increment>1</increment>
+								<select>zhaopian_1</select>
+								<select>zhaopian_2</select>
+								<select>zhaopian_3</select>
+								<select>zhaopian_4</select>
 							</data_def>
 						</data_def_list>
 					</repeat_test_data>

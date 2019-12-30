@@ -24,11 +24,11 @@ public class CarDAO {
 		  List<Car>  cars=new ArrayList<>();
 		  try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection  connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/cars?useUnicode=true&characterEncoding=UTF-8","root","root");
+			Connection  connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/cars?useUnicode=true&characterEncoding=UTF8","root","root");
 			
 			QueryRunner run = new QueryRunner();
 			ResultSetHandler<List<Car>> h = new BeanListHandler<Car>(Car.class);
-			cars= run.query(connection, "select * from car", h);
+			cars= run.query(connection, "select * from car order by carid desc", h);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -48,6 +48,28 @@ public class CarDAO {
 				
 				QueryRunner run = new QueryRunner();
 				int count=run.update(connection,"delete from car where carid=?",carid);
+				result=count>0?true:false;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			  
+		return result;
+	}
+	
+	/**
+	 * 这是添加车辆信息的dao方法
+	 * @param carid
+	 * @return
+	 */
+	public boolean  addCar(Car c) {
+		boolean result=false;
+		  try {
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection  connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/cars?useUnicode=true&characterEncoding=UTF-8","root","root");
+				
+				QueryRunner run = new QueryRunner();
+				int count=run.update(connection,"insert into  car(pinpaiming,xilie,shoujia,pailiang,gonglishu,yanse)  values(?,?,?,?,?,?)",c.getPinpaiming(),c.getXilie(),c.getShoujia(),c.getPailiang(),c.getGonglishu(),c.getYanse());
+//				int count=run.update(connection,"insert into  car(pinpaiming,xilie,shoujia,pailiang,gonglishu,yanse,zhaopian)  values(?,?,?,?,?,?,?)",c.getPinpaiming(),c.getXilie(),c.getShoujia(),c.getPailiang(),c.getGonglishu(),c.getYanse(),c.getZhaopian());
 				result=count>0?true:false;
 			} catch (Exception e) {
 				e.printStackTrace();

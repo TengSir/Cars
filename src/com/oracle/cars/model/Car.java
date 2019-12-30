@@ -22,17 +22,20 @@ public class Car implements Serializable {
 	/** xilie. */
 	private String xilie;
 
-	/** shoujia. */
-	private Integer shoujia;
-
 	/** gonglishu. */
 	private Integer gonglishu;
+
+	/** shoujia. */
+	private Integer shoujia;
 
 	/** yanse. */
 	private String yanse;
 
 	/** pailiang. */
 	private String pailiang;
+
+	/** zhaopian. */
+	private String zhaopian;
 
 	/**
 	 * �R���X�g���N�^.
@@ -98,25 +101,6 @@ public class Car implements Serializable {
 	}
 
 	/**
-	 * shoujia ��ݒ肵�܂�.
-	 * 
-	 * @param shoujia
-	 *            shoujia
-	 */
-	public void setShoujia(Integer shoujia) {
-		this.shoujia = shoujia;
-	}
-
-	/**
-	 * shoujia ���擾���܂�.
-	 * 
-	 * @return shoujia
-	 */
-	public Integer getShoujia() {
-		return this.shoujia;
-	}
-
-	/**
 	 * gonglishu ��ݒ肵�܂�.
 	 * 
 	 * @param gonglishu
@@ -133,6 +117,25 @@ public class Car implements Serializable {
 	 */
 	public Integer getGonglishu() {
 		return this.gonglishu;
+	}
+
+	/**
+	 * shoujia ��ݒ肵�܂�.
+	 * 
+	 * @param shoujia
+	 *            shoujia
+	 */
+	public void setShoujia(Integer shoujia) {
+		this.shoujia = shoujia;
+	}
+
+	/**
+	 * shoujia ���擾���܂�.
+	 * 
+	 * @return shoujia
+	 */
+	public Integer getShoujia() {
+		return this.shoujia;
 	}
 
 	/**
@@ -171,6 +174,25 @@ public class Car implements Serializable {
 	 */
 	public String getPailiang() {
 		return this.pailiang;
+	}
+
+	/**
+	 * zhaopian ��ݒ肵�܂�.
+	 * 
+	 * @param zhaopian
+	 *            zhaopian
+	 */
+	public void setZhaopian(String zhaopian) {
+		this.zhaopian = zhaopian;
+	}
+
+	/**
+	 * zhaopian ���擾���܂�.
+	 * 
+	 * @return zhaopian
+	 */
+	public String getZhaopian() {
+		return this.zhaopian;
 	}
 
 	/**
