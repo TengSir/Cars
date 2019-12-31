@@ -1,4 +1,4 @@
-
+create database  cars charset=utf8;
 /* Drop Tables */
 
 DROP TABLE CAR;
@@ -19,7 +19,22 @@ CREATE TABLE CAR
 	PAILIANG VARCHAR(20),
 	ZHAOPIAN VARCHAR(200),
 	PRIMARY KEY (CARID)
-);
+) charset=utf8;
+
+
+
+
+
+/* Create Tables */
+
+CREATE TABLE ADMINUSER
+(
+	USERID INT NOT NULL AUTO_INCREMENT,
+	USERNAME VARCHAR(20) NOT NULL,
+	PASSWORD VARCHAR(40) NOT NULL,
+	PRIMARY KEY (USERID)
+)charset=utf8;
+
 
 
 

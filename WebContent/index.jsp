@@ -1,3 +1,4 @@
+<%@page import="com.oracle.cars.model.Adminuser"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +46,7 @@
 <header>
  <h1 style="color:white;font-weight: bold;font-size: 0.8cm;text-shadow: 2px 2px 2px red;margin-top: 8px">二手车后台管理系统</h1>
  <ul class="rt_nav" style="position: relative;top: -5px">
+  <li style="color:white;font-weight: bold;position: relative;top: 10px">欢迎您:<%=((Adminuser)session.getAttribute("user")).getUsername() %></li>
   <li><a href="login.jsp" class="quit_icon">安全退出</a></li>
  </ul>
 </header>
